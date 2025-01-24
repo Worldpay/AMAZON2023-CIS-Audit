@@ -68,7 +68,7 @@ file:
     path: /etc/selinux/config
     exists: true
     contents:
-    - '/SELINUX=(enforcing|permissive)/'
+    - '/SELINUX=(enforcing|permissive)/i'
     meta:
       server: 1
       workstation: NA
