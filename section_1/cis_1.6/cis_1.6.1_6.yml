@@ -90,7 +90,7 @@ command:
     exec: getenforce
     exit-status: 0
     stdout:
-    - '/SELINUX=(Enforcing|Permissive)/'
+    - '/SELINUX=(Enforcing|Permissive)/i'
     meta:
       server: 1
       workstation: NA
