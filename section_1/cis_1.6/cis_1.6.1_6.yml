@@ -68,7 +68,7 @@ file:
     path: /etc/selinux/config
     exists: true
     contents:
-    - '/SELINUX=(Enforcing|Permissive)/'
+    - '/SELINUX=(enforcing|permissive)/'
     meta:
       server: 1
       workstation: NA
@@ -90,7 +90,7 @@ command:
     exec: getenforce
     exit-status: 0
     stdout:
-    - '/SELINUX=(Enforcing|Permissive)/'
+    - '/SELINUX=enforcing/'
     meta:
       server: 1
       workstation: NA
