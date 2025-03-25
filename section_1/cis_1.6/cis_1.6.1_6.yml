@@ -64,7 +64,7 @@ file:
       - AC-3
       - MP-2
   selinux_config:
-    title: 1.6.1.4 | Ensure the SELinux mode is not disabled| selinux_status config
+    title: 1.6.1.4 | Ensure the SELinux mode is not disabled | selinux_status config
     path: /etc/selinux/config
     exists: true
     contents:
@@ -86,11 +86,11 @@ file:
     {{ if .Vars.amzn2023cis_rule_1_6_1_4 }}
 command:
   selinux_config_running:
-    title: 1.6.1.4 | Ensure the SELinux mode is not disabled| selinux_status config
+    title: 1.6.1.4 | Ensure the SELinux mode is not disabled | selinux_status config
     exec: getenforce
     exit-status: 0
     stdout:
-    - '/SELINUX=enforcing/'
+    - '/SELINUX=(Enforcing|Permissive)/'
     meta:
       server: 1
       workstation: NA
