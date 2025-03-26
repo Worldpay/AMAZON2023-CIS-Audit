@@ -44,7 +44,7 @@ service:
 command:
   rpcbind.socket:
     title: 2.2.17 | Ensure rpcbind is not installed or the rpcbind services are masked | masked
-    exec: systemctl is-enabled rpcbind.socket
+    exec: systemctl is-enabled rpcbind.socket | grep masked
     exit-status: 0
     stdout:
     - '/^masked/'
